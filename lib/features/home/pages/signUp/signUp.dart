@@ -17,7 +17,7 @@ class _SignUpFormState extends State<SignUpForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       resizeToAvoidBottomInset: true,
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(
         title: Text('Create An Account'
         ),
@@ -33,7 +33,7 @@ class _SignUpFormState extends State<SignUpForm> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Create an account and gain access to our features',
+          'Create an account and gain access to our features',
                 style: TextStyle(
                       color: Color.fromRGBO(47, 47, 47, 1),
                     fontSize: 13, 
@@ -107,12 +107,16 @@ class _SignUpFormState extends State<SignUpForm> {
                     ],
                   ),
            
-                   SizedBox(height: 5),
+                  SizedBox(height: 5),
            
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text("Have an account? "),
+                        Text("Have an account?",
+                        style: TextStyle(
+                        fontSize: 15,
+                    ),
+                  ),
                         TextButton(
                           onPressed: () {
                             Navigator.push(
@@ -123,14 +127,14 @@ class _SignUpFormState extends State<SignUpForm> {
                             'Login',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Colors.teal,
+                              fontSize: 15,
+                              color: const Color(0xFF092C4C),
                             ),
                           ),
                         ),
                       ],
                     ),
-                
-           ],
+],
           
           
           ),

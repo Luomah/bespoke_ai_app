@@ -143,7 +143,7 @@ class _Signupform_pageState extends State<Signupform_page> {
                     fontSize: fontSize,
                   ),
                   SizedBox(height: screenHeight * 0.04),
-                  SizedBox(
+SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
                       child: provider.loading
@@ -151,14 +151,15 @@ class _Signupform_pageState extends State<Signupform_page> {
                               valueColor:
                                   AlwaysStoppedAnimation<Color>(Colors.white),
                             )
-                          : Text("Proceed",
-                              style: TextStyle(fontSize: fontSize)),
+                          : Text("Proceed", style: TextStyle(fontSize: 18)),
                       style: ElevatedButton.styleFrom(
                         padding:
                             EdgeInsets.symmetric(vertical: screenHeight * 0.02),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(100),
                         ),
+                        backgroundColor: const Color(
+                            0xFF092C4C), // Correctly placed background color
                       ),
                       onPressed: provider.loading
                           ? null

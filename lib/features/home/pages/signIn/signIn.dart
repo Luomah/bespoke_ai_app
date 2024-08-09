@@ -126,7 +126,7 @@ class _SignInState extends State<SignIn> {
                         'Sign up',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          color: Colors.teal,
+                          color: const Color(0xFF092C4C),
                         ),
                       ),
                     ),

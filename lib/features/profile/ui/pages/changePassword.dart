@@ -7,7 +7,8 @@ class ChangePasswordPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Change Password',
+        title: const Text(
+          'Change Password',
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: const Color(0xFF092C4C),
@@ -45,8 +46,8 @@ class ChangePasswordPage extends StatelessWidget {
               onPressed: () {
                 // Handle password change logic
               },
-              child: const Text('Change Password',
-
+              child: const Text(
+                'Change Password',
               ),
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFF092C4C),

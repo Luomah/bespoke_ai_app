@@ -1,7 +1,8 @@
+import 'package:bespoke_ai_job_app/features/home/pages/signIn/signIn.dart';
+import 'package:bespoke_ai_job_app/features/profile/ui/pages/changePassword.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'edit_profile_page.dart';
-import 'change_password_page.dart';
 //import 'login_page.dart'; // Import LoginPage
 
 class ProfilePage extends StatefulWidget {
@@ -25,7 +26,7 @@ class _ProfilePageState extends State<ProfilePage> {
   Future<void> _logout() async {
     try {
       await FirebaseAuth.instance.signOut();
-      Navigator.pushReplacementNamed(context, '/login');
+      Navigator.pushReplacementNamed(context, 'SignIn()');
     } catch (e) {
       print("Error logging out: $e");
     }
@@ -111,7 +112,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   _buildListTileWithSpacing(
                     'assets/person.png',
                     'Edit profile',
-                        () {
+                    () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -128,7 +129,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   _buildListTileWithSpacing(
                     'assets/change_password.png',
                     'Change password',
-                        () {
+                    () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -141,19 +142,19 @@ class _ProfilePageState extends State<ProfilePage> {
                   _buildListTileWithSpacing(
                     'assets/Feedback.png',
                     'Feedback',
-                        () {},
+                    () {},
                   ),
                   _buildDivider(),
                   _buildListTileWithSpacing(
                     'assets/settings.png',
                     'Settings',
-                        () {},
+                    () {},
                   ),
                   _buildDivider(),
                   _buildListTileWithSpacing(
                     'assets/help.png',
                     'Help center',
-                        () {},
+                    () {},
                   ),
                   _buildDivider(),
                   _buildListTileWithSpacing(
@@ -170,7 +171,8 @@ class _ProfilePageState extends State<ProfilePage> {
     );
   }
 
-  Widget _buildListTileWithSpacing(String assetPath, String title, VoidCallback onTap) {
+  Widget _buildListTileWithSpacing(
+      String assetPath, String title, VoidCallback onTap) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: ListTile(
