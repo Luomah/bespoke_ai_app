@@ -1,5 +1,5 @@
-import 'package:bespoke_ai_job_app/features/home/pages/forgetPassword/forgetPassword.dart';
-import 'package:bespoke_ai_job_app/features/home/pages/home_page.dart';
+import 'package:bespoke_ai_job_app/features/home/ui/pages/forgetPassword/forgetPassword.dart';
+import 'package:bespoke_ai_job_app/features/home/ui/pages/home_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
