@@ -1,8 +1,5 @@
-import 'package:bespoke_ai_job_app/features/home/pages/signIn/signIn.dart';
-<<<<<<< HEAD
+import 'package:bespoke_ai_job_app/features/home/ui/pages/signIn/signIn.dart';
 import 'package:bespoke_ai_job_app/features/profile/ui/pages/changePassword.dart';
-=======
->>>>>>> upstream/main
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'edit_profile_page.dart';
@@ -29,11 +26,7 @@ class _ProfilePageState extends State<ProfilePage> {
   Future<void> _logout() async {
     try {
       await FirebaseAuth.instance.signOut();
-<<<<<<< HEAD
-      Navigator.pushReplacementNamed(context, 'SignIn()');
-=======
       Navigator.push(context, SignIn.route());
->>>>>>> upstream/main
     } catch (e) {
       print("Error logging out: $e");
     }
@@ -100,46 +93,6 @@ class _ProfilePageState extends State<ProfilePage> {
                 SizedBox(
                   height: 275,
                 ),
-<<<<<<< HEAD
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black26,
-                    offset: Offset(0, 1),
-                    blurRadius: 10.0,
-                    spreadRadius: 1.0,
-                  ),
-                ],
-              ),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  const SizedBox(height: 60),
-                  _buildListTileWithSpacing(
-                    'assets/person.png',
-                    'Edit profile',
-                    () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => EditProfilePage(
-                            name: _name,
-                            phoneNumber: _phoneNumber,
-                            onSave: _updateProfile,
-                          ),
-                        ),
-                      );
-                    },
-                  ),
-                  _buildDivider(),
-                  _buildListTileWithSpacing(
-                    'assets/change_password.png',
-                    'Change password',
-                    () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const ChangePasswordPage(),
-=======
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: Container(
@@ -178,7 +131,6 @@ class _ProfilePageState extends State<ProfilePage> {
                               ),
                             );
                           },
->>>>>>> upstream/main
                         ),
                         _buildDivider(),
                         _buildListTileWithSpacing(
@@ -221,37 +173,8 @@ class _ProfilePageState extends State<ProfilePage> {
                       ],
                     ),
                   ),
-<<<<<<< HEAD
-                  _buildDivider(),
-                  _buildListTileWithSpacing(
-                    'assets/Feedback.png',
-                    'Feedback',
-                    () {},
-                  ),
-                  _buildDivider(),
-                  _buildListTileWithSpacing(
-                    'assets/settings.png',
-                    'Settings',
-                    () {},
-                  ),
-                  _buildDivider(),
-                  _buildListTileWithSpacing(
-                    'assets/help.png',
-                    'Help center',
-                    () {},
-                  ),
-                  _buildDivider(),
-                  _buildListTileWithSpacing(
-                    'assets/logout.png',
-                    'Logout',
-                    _logout,
-                  ),
-                ],
-              ),
-=======
                 ),
               ],
->>>>>>> upstream/main
             ),
           ),
         ],
