@@ -1,5 +1,5 @@
-import 'package:bespoke_ai_job_app/features/home/ui/pages/signIn/signIn.dart';
-import 'package:bespoke_ai_job_app/features/home/ui/pages/signUp/signUpForm.dart';
+import 'package:bespoke_ai_job_app/features/home/pages/signIn/signIn.dart';
+import 'package:bespoke_ai_job_app/features/home/pages/signUp/signUpForm.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -42,6 +42,39 @@ class _SignUpFormState extends State<SignUpForm> {
                       color: Colors.grey,
                     ),
                   ),
+<<<<<<< HEAD
+           
+                  SizedBox(height: 5),
+           
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("Have an account?",
+                        style: TextStyle(
+                        fontSize: 15,
+                    ),
+                  ),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context, 
+                              MaterialPageRoute(builder: (context) => SignIn()));
+                          },
+                          child: Text(
+                            'Login',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                              color: const Color(0xFF092C4C),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+],
+          
+          
+=======
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 8.0),
                     child: Text(
@@ -109,6 +142,7 @@ class _SignUpFormState extends State<SignUpForm> {
                 ],
               ),
             ],
+>>>>>>> upstream/main
           ),
         ),
       ),
