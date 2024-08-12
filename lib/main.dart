@@ -1,4 +1,4 @@
-import 'package:bespoke_ai_job_app/features/home/ui/pages/signIn/signIn.dart';
+import 'package:bespoke_ai_job_app/features/auth/pages/signIn/signIn.dart';
 import 'package:bespoke_ai_job_app/features/jobs/blocs/jobs_bloc.dart';
 import 'package:bespoke_ai_job_app/features/jobs/data/model/job.dart';
 import 'package:bespoke_ai_job_app/features/profile/ui/pages/profile_page.dart';
@@ -23,9 +23,8 @@ void main() async {
   await Hive.openBox<ResumeModel>(AppConstants.RESUME_BOX_NAME);
   await Hive.openBox<Job>(AppConstants.JOB_BOX_NAME);
   await Firebase.initializeApp();
-  
-  runApp(const MyApp());
 
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -52,7 +51,8 @@ class MyApp extends StatelessWidget {
         title: 'Bespoke',
         theme: ThemeData(
           // primaryColor: Colors.teal,
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal,primary: Colors.teal),
+          colorScheme: ColorScheme.fromSeed(
+              seedColor: Colors.teal, primary: Colors.teal),
           useMaterial3: true,
           bottomNavigationBarTheme: const BottomNavigationBarThemeData(
             selectedItemColor: Color(0XFF092C4C),
@@ -69,8 +69,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
         debugShowCheckedModeBanner: false,
-        home: const ProfilePage(),
-        
+        home: const SignIn(),
       ),
     );
   }
