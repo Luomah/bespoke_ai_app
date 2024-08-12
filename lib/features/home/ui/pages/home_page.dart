@@ -20,8 +20,7 @@ class _HomePageState extends State<HomePage> {
     const ResumePage(),
     const JobsPage(),
     const ProfilePage(),
-   
-  ];
+];
 
   @override
   Widget build(BuildContext context) {

@@ -1,9 +1,9 @@
 import 'package:bespoke_ai_job_app/features/auth/pages/signIn/signInForm.dart';
+import 'package:bespoke_ai_job_app/features/profile/ui/pages/changePassword.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../../../auth/pages/signIn/signIn.dart';
 import 'edit_profile_page.dart';
-import 'change_password_page.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
